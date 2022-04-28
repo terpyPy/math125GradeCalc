@@ -8,8 +8,8 @@ CLASS_WORK_WEIGHT = 25.0
 TEST_POINT_WEIGHT = 15.00
 CHECKS_AND_SETS_WEIGHT = 15.0
 
-def getReturnArray(prompt_arr:list, return_arr:list, start_str:str)->list:
-    for i in range(len(prompt_arr) - 1):
+def getReturnArray(prompt_arr:list, return_arr:list, start_str:str, stop:int=1)->list:
+    for i in range(len(prompt_arr) - stop):
         loop_prompt = start_str + prompt_arr[i]
         return_arr.append(input(loop_prompt))
     return return_arr
@@ -30,9 +30,9 @@ def promptFunctions(promptArr: list, returnArr, startStr:str='Please enter ')->l
         startIndex = cases.index(False)
         msg = 'Please enter an integer for'
         if startIndex == 0:
-            print(f'{msg} {promptArr[startIndex]}\n')
+            print(f'------- :{msg} {promptArr[startIndex]}-------\n')
         else:
-            print(f'{msg} {promptArr[startIndex+1]}\n')
+            print(f'------- :{msg} {promptArr[startIndex+1]}-------\n')
         return promptFunctions(promptArr, [], startStr)
         
     # only return values if all inputs are valid 
@@ -83,7 +83,8 @@ def main()->str:
     testsTotal, testTaken = dataRecived
     # calculate weight factor or total points for class currently, 
     # scales from 0 to 100 based on weight val, ie 3/4 = 100% of class total calculated
-    factor = (CHECKS_AND_SETS_WEIGHT + CLASS_WORK_WEIGHT) + (TEST_POINT_WEIGHT * (testTaken + 1))
+    maxScoreTotal = (TEST_POINT_WEIGHT * (testTaken + 1))
+    factor = (CHECKS_AND_SETS_WEIGHT + CLASS_WORK_WEIGHT) + maxScoreTotal
     
     print(factor)
     #
@@ -97,11 +98,16 @@ def main()->str:
     completedTestScores, newTestPointTot = getTestScores(testsTotal, testTaken, EXAM_WEIGHT_FACTOR)
         
                 
-    x1 = round((sum(completedTestScores) + newTestPointTot),2)
+    x1 = (sum(completedTestScores) + newTestPointTot)
     x2 = WeightCalc(CLASS_WORK_FACTOR, float(input(f'Enter % for class work: ')))
     x3 = WeightCalc(CHECKS_AND_SETS_FACTOR, float(input(f'Enter % for checks & set\'s work: ')))
-    f = x1 + x2 + x3
-    return f'current grade is:--- {f}%'
+    f = round(x1 + x2 + x3,2)
+    calcStr = [f'current grade is:--- {f}%',
+               f'test point total is:--- {x1}/{maxScoreTotal}',
+               f'class work total is:--- {x2}/{CLASS_WORK_WEIGHT}',
+               f'checks & sets total is:--- {x3}/{CHECKS_AND_SETS_WEIGHT}']
+    calcStr = '\n'.join(calcStr)
+    return calcStr
     
            
 # if not imported as a module call the data prompt function & execute without saving to file
