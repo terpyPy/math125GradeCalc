@@ -3,6 +3,10 @@
 #  Purpose:     Calculate the final grade for a student
 # Inputs:       Number of tests taken, number of tests total, score in percent for test
 # constants for exam point scale conversion from precents gradeCalc
+from cgitb import reset
+from unittest import result
+
+
 CLASS_WORK_WEIGHT = 25.0
 TEST_POINT_WEIGHT = 15.00
 CHECKS_AND_SETS_WEIGHT = 15.0
@@ -59,11 +63,23 @@ def WeightCalc(weight: float, ScoreInPercent)->int:
     expected = round((weight * ScoreInPercent),2) 
     return expected
 
-def promptUserForData()->str:
+def propmtStrBuilder()->list:
+    # build prompt string
+    result = []
+    startStr = 'number of tests' 
+    midStr_Case1 = 'overall'
+    midStr_Case2 = 'taken'
+    endStr = 'this semester: '
+    startEndArr = [startStr, endStr]
+    midArr = [midStr_Case1, midStr_Case2]
+    for i in range(len(midArr)):
+        result.append(f'{startEndArr[0]} {midArr[i]} {startEndArr[1]}')
+    result.append('score in percent for test: ')
+    return result
+
+def main()->str:
     # list of prompts for user input
-    dataToEnter = ['number of tests overall this semester: ', #0
-                   'number of tests taken this semester:  ', #1
-                   'score in percent for test: ' ] #2
+    dataToEnter = propmtStrBuilder()
     # do not use last prompt in dataToEnter list
     dataRecived = promptFunctions(dataToEnter, [])
     # unpack list
@@ -93,6 +109,6 @@ def promptUserForData()->str:
            
 # if not imported as a module call the data prompt function & execute without saving to file
 if __name__ == '__main__':
-    run = promptUserForData()
+    run = main()
     print(run)
    
