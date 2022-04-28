@@ -3,10 +3,7 @@
 #  Purpose:     Calculate the final grade for a student
 # Inputs:       Number of tests taken, number of tests total, score in percent for test
 # constants for exam point scale conversion from precents gradeCalc
-from cgitb import reset
-from unittest import result
-
-
+#  Outputs:     Final grade for student
 CLASS_WORK_WEIGHT = 25.0
 TEST_POINT_WEIGHT = 15.00
 CHECKS_AND_SETS_WEIGHT = 15.0
