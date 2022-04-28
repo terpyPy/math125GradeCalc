@@ -7,85 +7,92 @@ CLASS_WORK_WEIGHT = 25.0
 TEST_POINT_WEIGHT = 15.00
 CHECKS_AND_SETS_WEIGHT = 15.0
 
+def getReturnArray(prompt_arr:list, return_arr:list, start_str:str)->list:
+    for i in range(len(prompt_arr) - 1):
+        loop_prompt = start_str + prompt_arr[i]
+        return_arr.append(input(loop_prompt))
+    return return_arr
 
 def promptFunctions(promptArr: list, returnArr, startStr:str='Please enter ')->list:
-    # if startIndex not None get a list of values from startIndex to end of promptArr
-    # when passed 0 both prompts received none integer values
-    # if startIndex != None:
-    #     promptArr = promptArr[startIndex:]
-    #     startIndex = None
+    # prompt user for data and return list of data
+    # promptArr is list of prompts for user input
+    # returnArr is list of data recived from user input
+    returnArr = getReturnArray(promptArr, returnArr, startStr)
     
-    for i in range( len(promptArr) - 1):
-        loopPrompt = startStr + promptArr[i]
-        returnArr.append(input(loopPrompt))
-        
+    # get the first & second elements of the list 
     testTaken, testsTotal = returnArr[0:2]
+    # to evaluate if the data recived is valid check if the data is an int
     cases = [testTaken.isnumeric(), testsTotal.isnumeric()]
     
     # for invalid input call self recursively
     if (False in cases):
         startIndex = cases.index(False)
+        msg = 'Please enter an integer for'
         if startIndex == 0:
-            print(f'Please enter an integer for {promptArr[startIndex]}\n')
+            print(f'{msg} {promptArr[startIndex]}\n')
         else:
-            print(f'Please enter an integer for {promptArr[startIndex+1]}\n')
+            print(f'{msg} {promptArr[startIndex+1]}\n')
         return promptFunctions(promptArr, [], startStr)
         
-        
-
     # only return values if all inputs are valid 
     elif (cases == [True, True]):
         returnArr = [int(testTaken), int(testsTotal)]
         return  returnArr
 
-def promptUserForData()->str:
-    # list of prompts for user input
-    dataToEnter = ['number of test this semester: ', 'number of tests taken this semester:  ', 'score in percent for test: ']
-    # do not use last prompt in dataToEnter list
-    dataRecived = promptFunctions(dataToEnter, [])
-  
-    testsTotal, testTaken = dataRecived
-    
-    # cases for the factor of point scale based on num of tests taken
-    if testTaken == 3:
-        factor = 100.00
-    elif testTaken == 2:
-        factor = 85.00
-    # default case quits program
-    else:
-        return
-    
-    EXAM_WEIGHT_FACTOR = TEST_POINT_WEIGHT / factor
-    CLASS_WORK_FACTOR = CLASS_WORK_WEIGHT / factor
-    CHECKS_AND_SETS_FACTOR = CHECKS_AND_SETS_WEIGHT / factor
-    completedTestScores = []
-    print(f'recived:- {testTaken}/{testsTotal} tests taken.')
-    for i in range(testsTotal - testTaken):
+def getTestScores(test_total, test_taken, WEIGHT_FACTOR)->list:
+    completed_Test_Scores = []
+    for i in range(test_total - test_taken):
         if i == 0:
             newScore = int(input(f'Enter estimated score for ungraded test #{i}: '))
-            newTestPointTot = WeightCalc(EXAM_WEIGHT_FACTOR, newScore)
-            for j in range(testTaken):
+            newTestPointTot = WeightCalc(WEIGHT_FACTOR, newScore)
+            for j in range(test_taken):
                 print(f'Enter score for test {j+1}')
                 score = input()
-                result = WeightCalc(EXAM_WEIGHT_FACTOR,float(score))
-                completedTestScores.append(result)
+                result = WeightCalc(WEIGHT_FACTOR,float(score))
+                completed_Test_Scores.append(result)
                 print(f'Expected score for test {j+1} is {result}/{TEST_POINT_WEIGHT} :----')
-        
                 
-    x1 = round((sum(completedTestScores) + newTestPointTot),2)
-    x2 = WeightCalc(CLASS_WORK_FACTOR, float(input(f'Enter % for class work: ')))
-    x3 = WeightCalc(CHECKS_AND_SETS_FACTOR, float(input(f'Enter % for checks & set\'s work: ')))
-    f = x1 + x2 + x3
-    print(f'current grade is:--- {f}')
-    #todo figure out the actual grad scale
-        
+    return completed_Test_Scores, newTestPointTot
 
 def WeightCalc(weight: float, ScoreInPercent)->int:
     
     expected = round((weight * ScoreInPercent),2) 
     return expected
 
+def promptUserForData()->str:
+    # list of prompts for user input
+    dataToEnter = ['number of tests overall this semester: ', #0
+                   'number of tests taken this semester:  ', #1
+                   'score in percent for test: ' ] #2
+    # do not use last prompt in dataToEnter list
+    dataRecived = promptFunctions(dataToEnter, [])
+    # unpack list
+    testsTotal, testTaken = dataRecived
+    # calculate weight factor or total points for class currently, 
+    # scales from 0 to 100 based on weight val, ie 3/4 = 100% of class total calculated
+    factor = (CHECKS_AND_SETS_WEIGHT + CLASS_WORK_WEIGHT) + (TEST_POINT_WEIGHT * (testTaken + 1))
+    
+    print(factor)
+    #
+    # calculate the weight factors for each assignment type
+    EXAM_WEIGHT_FACTOR = TEST_POINT_WEIGHT / factor
+    CLASS_WORK_FACTOR = CLASS_WORK_WEIGHT / factor
+    CHECKS_AND_SETS_FACTOR = CHECKS_AND_SETS_WEIGHT / factor
+    
+    print(f'recived:- {testTaken}/{testsTotal} tests taken.')
+    
+    completedTestScores, newTestPointTot = getTestScores(testsTotal, testTaken, EXAM_WEIGHT_FACTOR)
+        
+                
+    x1 = round((sum(completedTestScores) + newTestPointTot),2)
+    x2 = WeightCalc(CLASS_WORK_FACTOR, float(input(f'Enter % for class work: ')))
+    x3 = WeightCalc(CHECKS_AND_SETS_FACTOR, float(input(f'Enter % for checks & set\'s work: ')))
+    f = x1 + x2 + x3
+    return f'current grade is:--- {f}%'
+    
+           
 # if not imported as a module call the data prompt function & execute without saving to file
 if __name__ == '__main__':
     run = promptUserForData()
+    print(run)
    
