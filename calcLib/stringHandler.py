@@ -27,10 +27,17 @@ def promptStrBuilder()->list:
     return result
 
 def intSanityCheck(caseArr:list)->list:
-    
+     # to evaluate if the data recived is valid check if the data is an int
     returnArr = []
     for i in range(len(caseArr)):
         returnArr.append(caseArr[i].isnumeric())
+        if returnArr[i] == False:
+            try:
+                float(caseArr[i].strip('-')) 
+                returnArr[i] = True
+            except ValueError:
+                returnArr[i] = False
+                
     return returnArr
 
 def promptFunctions(promptArr: list, returnArr, startStr:str='Please enter ')->list:
@@ -40,9 +47,11 @@ def promptFunctions(promptArr: list, returnArr, startStr:str='Please enter ')->l
     
     # get the first & second elements of the list 
     testTaken, testsTotal = returnArr[0:2]
-    # to evaluate if the data recived is valid check if the data is an int
-    cases = intSanityCheck(returnArr[0:2])    
-    # only return values if all inputs are valid 
-    
-    returnArr = [int(testTaken), int(testsTotal)]
+    # strip any negative signs from the data not in the domain of the operation
+    testTaken = testTaken.strip('-')
+    testsTotal = testsTotal.strip('-')
+    # 
+    # input already validated by getReturnArray, 
+    # take only 1-9 values, 10 term exams is unreasonable, cast to int 
+    returnArr = [int(testTaken[0]), int(testsTotal[0])]
     return  returnArr

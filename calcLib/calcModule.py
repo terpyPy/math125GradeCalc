@@ -14,8 +14,9 @@ def getTestScores(test_total:int, test_taken:int, WEIGHT_FACTOR:float, POINT_WEI
     if depth == 0:
         
         newScore = (input(f'Enter estimated score for ungraded test #{depth}: '))
-        if newScore.isnumeric():
-            newTestPointTot = WeightCalc(WEIGHT_FACTOR, int(newScore))
+        check = stringHandler.intSanityCheck([newScore])
+        if check[0] == True:
+            newTestPointTot = WeightCalc(WEIGHT_FACTOR, float(newScore))
         else:
             # depth += 1
             return getTestScores(test_total, test_taken, WEIGHT_FACTOR, POINT_WEIGHT, depth)
