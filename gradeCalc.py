@@ -1,9 +1,11 @@
 #  Author:      Cameron Kerley
-#  Date:        04/03/22
+#  Date:        04/27/22
 #  Purpose:     Calculate the final grade for a student
-# Inputs:       Number of tests taken, number of tests total, score in percent for test
-# constants for exam point scale conversion from precents gradeCalc
-#  Outputs:     Final grade for student
+#  Inputs:      Number of tests taken, number of tests total, score in percent for test
+#  constants:   TEST_POINT_WEIGHT, CLASS_WORK_WEIGHT, CHECKS_AND_SETS_WEIGHT, 
+#               weight being % of final grade for work type
+#  Outputs:     Final grade for student and the total points for each type of work
+
 from calcLib import stringHandler, calcModule
 CLASS_WORK_WEIGHT = 25.0
 TEST_POINT_WEIGHT = 15.00
@@ -34,15 +36,15 @@ def main()->str:
     completedTestScores, newTestPointTot = calcModule.getTestScores(testsTotal, testTaken, EXAM_WEIGHT_FACTOR, TEST_POINT_WEIGHT)
         
                 
-    x1 = (sum(completedTestScores) + newTestPointTot)
+    x1 = sum(completedTestScores) + newTestPointTot
     x2 = calcModule.WeightCalc(CLASS_WORK_FACTOR, float(input(f'Enter % for class work: ')))
     x3 = calcModule.WeightCalc(CHECKS_AND_SETS_FACTOR, float(input(f'Enter % for checks & set\'s work: ')))
     f = round(x1 + x2 + x3,2)
-    calcStr = [f'current grade is:--- {f}%',
+    calcArr = [f'current grade is:--- {f}%',
                f'test point total is:--- {x1}/{maxScoreTotal}',
                f'class work total is:--- {x2}/{CLASS_WORK_WEIGHT}',
                f'checks & sets total is:--- {x3}/{CHECKS_AND_SETS_WEIGHT}']
-    calcStr = '\n'.join(calcStr)
+    calcStr = '\n'.join(calcArr)
     return calcStr
     
            
@@ -50,4 +52,5 @@ def main()->str:
 if __name__ == '__main__':
     run = main()
     print(run)
+    # pharmacologic
    
