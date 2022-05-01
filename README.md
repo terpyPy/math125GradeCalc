@@ -14,3 +14,6 @@ script for utk math 125 grade speculation
 
 # added student database simulation
 added the Student & mathClass classes, provide functionality for studentDataBase.py, makes a searchable database of fake students with unique id numbers, UIDnames, and grade totals. database search is a binary search with a maximum lookup of 20 in 1 mill + students.
+
+# added grade book ui
+![image](https://user-images.githubusercontent.com/66324329/166133955-d86d8a0a-00e9-44f2-bcfa-58c43f530417.png)
