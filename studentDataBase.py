@@ -22,9 +22,8 @@ def main(debug=100)->None:
     # runTime = time.time() - startTime
     # print(f'Time to create class: {runTime}')
     schoolClass.students.sort(key=lambda x: x.getStudentID())
-    while True:    
-        x,y = schoolClass.getStudent(int(input('Enter student num: ')))
-        print(x,'\n'+y+'\n')
+    return schoolClass
+        
 
 if __name__ == '__main__':
     x = main(1000)
