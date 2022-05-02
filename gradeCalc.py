@@ -14,11 +14,10 @@ CHECKS_AND_SETS_WEIGHT = 15.0
 
 def main(debug=None)->str:
     # list of prompts for user input
-    if debug == None:
-        dataToEnter = stringHandler.promptStrBuilder()
-        dataRecived = stringHandler.promptFunctions(dataToEnter, [])
-    else:
-        dataRecived = debug[0]
+    
+    dataToEnter = stringHandler.promptStrBuilder()
+    dataRecived = stringHandler.promptFunctions(dataToEnter, [])
+   
     # do not use last prompt in dataToEnter list
     # unpack list
     testsTotal, testTaken = dataRecived
@@ -36,31 +35,50 @@ def main(debug=None)->str:
     
     # print(f'recived:- {testTaken}/{testsTotal} tests taken.')
     
-    if debug == None:
-        completedTestScores, newTestPointTot = calcModule.getTestScores(testsTotal, testTaken, EXAM_WEIGHT_FACTOR, TEST_POINT_WEIGHT)
-        x1 = sum(completedTestScores) + newTestPointTot
-        x2 = calcModule.WeightCalc(CLASS_WORK_FACTOR, float(input(f'Enter % for class work: ')))
-        x3 = calcModule.WeightCalc(CHECKS_AND_SETS_FACTOR, float(input(f'Enter % for checks & set\'s work: ')))
-    else:
-        completedTestScores, newTestPointTot = debug[1]
-        debugResult = []
-        for i in range(len(completedTestScores)):
-            score = calcModule.WeightCalc(EXAM_WEIGHT_FACTOR, completedTestScores[i])
-            debugResult.append(score)
-        newTestPointTot = calcModule.WeightCalc(EXAM_WEIGHT_FACTOR,newTestPointTot)
-        x1 = sum(debugResult) + newTestPointTot
-        x2 = calcModule.WeightCalc(CLASS_WORK_FACTOR, float(debug[2]))
-        x3 = calcModule.WeightCalc(CHECKS_AND_SETS_FACTOR, float(debug[3]))
+    
+    completedTestScores, newTestPointTot = calcModule.getTestScores(testsTotal, testTaken, EXAM_WEIGHT_FACTOR, TEST_POINT_WEIGHT)
+    x1 = sum(completedTestScores) + newTestPointTot
+    x2 = calcModule.WeightCalc(CLASS_WORK_FACTOR, float(input(f'Enter % for class work: ')))
+    x3 = calcModule.WeightCalc(CHECKS_AND_SETS_FACTOR, float(input(f'Enter % for checks & set\'s work: ')))
+    
                 
     f = round(x1 + x2 + x3,2)
-    calcArr = [f'current grade is:--- {f}%',
-               f'test point total is:--- {x1}/{maxScoreTotal}',
-               f'class work total is:--- {x2}/{CLASS_WORK_WEIGHT}',
-               f'checks & sets total is:--- {x3}/{CHECKS_AND_SETS_WEIGHT}']
+    calcArr = [f'current grade is:--- {f}%,',
+               f'test point total is:--- {x1}/{maxScoreTotal},',
+               f'class work total is:--- {x2}/{CLASS_WORK_WEIGHT},',
+               f'checks & sets total is:--- {x3}/{CHECKS_AND_SETS_WEIGHT},']
     calcStr = '\n'.join(calcArr)
+    # return as string for printing purposes, perserves cmd line 
+    # functionality of this and other files, not used in main
     return calcStr
     
-           
+def uiVersion(gradeLst=list)->str:
+    dataRecived = gradeLst[0]
+    testsTotal, testTaken = dataRecived
+    maxScoreTotal = (TEST_POINT_WEIGHT * (testTaken + 1))
+    factor = (CHECKS_AND_SETS_WEIGHT + CLASS_WORK_WEIGHT) + maxScoreTotal
+    EXAM_WEIGHT_FACTOR = TEST_POINT_WEIGHT / factor
+    CLASS_WORK_FACTOR = CLASS_WORK_WEIGHT / factor
+    CHECKS_AND_SETS_FACTOR = CHECKS_AND_SETS_WEIGHT / factor
+    completedTestScores, newTestPointTot = gradeLst[1]
+    debugResult = []
+    for i in range(len(completedTestScores)):
+        score = calcModule.WeightCalc(EXAM_WEIGHT_FACTOR, completedTestScores[i])
+        debugResult.append(score)
+    newTestPointTot = calcModule.WeightCalc(EXAM_WEIGHT_FACTOR,newTestPointTot)
+    x1 = sum(debugResult) + newTestPointTot
+    x2 = calcModule.WeightCalc(CLASS_WORK_FACTOR, float(gradeLst[2]))
+    x3 = calcModule.WeightCalc(CHECKS_AND_SETS_FACTOR, float(gradeLst[3]))
+    f = round(x1 + x2 + x3,2)
+    calcArr = [f'current grade is:--- {f}%,',
+               f'test point total is:--- {x1} / {maxScoreTotal},',
+               f'class work total is:--- {x2} / {CLASS_WORK_WEIGHT},',
+               f'checks & sets total is:--- {x3} / {CHECKS_AND_SETS_WEIGHT},']
+    calcStr = '\n'.join(calcArr)
+    # return as string for printing purposes, perserves cmd line 
+    # functionality of this and other files, not used in main
+    return calcStr
+
 # if not imported as a module call the data prompt function & execute without saving to file
 if __name__ == '__main__':
     studentGrades = main()
