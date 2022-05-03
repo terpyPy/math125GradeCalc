@@ -35,6 +35,11 @@ class Student:
     
     def getGrade(self)->str:
         return self.currentGrade
+    def getClassTotal(self):
+        Total = self.classTotal.split(" ")
+        # Total[3] = str(float(grade))
+        num = float(Total[3][:-1])
+        return num
     def getStudentID(self):
         return self.studentID
     def getStudentName(self):

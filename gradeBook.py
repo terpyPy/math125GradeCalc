@@ -1,13 +1,15 @@
 import PySimpleGUI as sg
 import studentDataBase as sdb
 import gradeEntryHandler as geh
-
+import math
 
 file_list_column = [
    
     [
         sg.Text("student grades"),
         sg.Submit(key="-show-",button_text="show"),
+        sg.Submit(key="-class avg-",button_text="class average:"),
+        sg.Text("0.00  ", key="avg")
     ],
     
     [
@@ -68,4 +70,9 @@ while True:
             
         except:
             print("not_found")
+    if event == "-class avg-":
+        classGrades = [i.getClassTotal() for i in file_list.students]
+        avg = sum(classGrades) / len(classGrades)
+        window["avg"].update(str(avg))
+        
 window.close()

@@ -33,7 +33,8 @@ def makeStudent(schoolClass, i)->Student:
                 ]
     studentGrades = gradeCalc.uiVersion(test)
     schoolClass.addStudent(Student(i, schoolClass.sectionNumber, studentGrades))
+    
     return schoolClass.students[i].getStudentName() + 'loaded...'
     
 if __name__ == '__main__':
-    x = main(10000)
+    x = main(1000)
