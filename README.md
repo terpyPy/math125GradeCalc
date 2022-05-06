@@ -4,14 +4,14 @@ script for utk math 125 grade speculation
 - python gradeCalc.py
 
 # UPDATES
-*version 1.1.0 patch:
+-)version 1.1.0 patch:
 over all functionality refactor
 streamlined data input, sanity, and class inheritance. encapsulated data retrieval to the proper scope and moved function that manipulate class data to there respective class method equivalents.
 
 #added:
 -MathClass.sort method
 -MathClass.get<gradecategory>Average methods
-#UI:
+# UI:
 -UI events and interaction with MathClass rescoped, top bar menus added
 1) New tab added,:
 2)function, adds a new student based on student 0, which is not displayed to the user, and used only as a reference to inti a new student.
