@@ -1,18 +1,15 @@
 # math125GradeCalc
-script for utk math 125 grade speculation
-- To use open command prompt and navagite to the dirctory/folder the script is located and type:
-- python gradeCalc.py
-
-# UPDATES:
-- version 1.1.0 patch:
-  1) over all functionality refactor
-  2) streamlined data input, sanity, and class inheritance
-  3) encapsulated data retrieval to the proper scope and moved function that manipulate class data to there respective class method equivalents. 
+student & mathClass classes, provide functionality for studentDataBase.py, makes a searchable database of fake students with unique id numbers, UIDnames, and grade totals. database search is a binary search with a maximum lookup of 20 in 1 mill + students.
+  # UPDATES:
+  - version 1.1.0 patch:
+    1) over all functionality refactor
+    2) streamlined data input, sanity, and class inheritance
+    3) encapsulated data retrieval to the proper scope and moved function that manipulate class data to there respective          class method equivalents. 
 
 
-  ## added:
-  1. MathClass.sort method
-  2. MathClass.get<gradecategory>Average methods
+    ## added:
+    1. MathClass.sort method
+    2. MathClass.get<gradecategory>Average methods
   ## UI:
     - UI events and interaction with MathClass rescoped, top bar menus added
     - Additions: The "New" was tab added
