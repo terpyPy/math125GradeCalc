@@ -8,10 +8,10 @@ script for utk math 125 grade speculation
 over all functionality refactor
 streamlined data input, sanity, and class inheritance. encapsulated data retrieval to the proper scope and moved function that manipulate class data to there respective class method equivalents.
 
-added:
-MathClass.sort method
-MathClass.get<gradecategory>Average methods
-UI:
+#added:
+##MathClass.sort method
+##MathClass.get<gradecategory>Average methods
+#UI:
 -UI events and interaction with MathClass rescoped, top bar menus added
 ---New tab added,:
 ----function, adds a new student based on student 0, which is not displayed to the user, and used only as a reference to inti a new student.
