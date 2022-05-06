@@ -8,7 +8,11 @@ class_Av_button = buttonPadding[:4] + "class average:" + buttonPadding[:4]
 test_Av_button = buttonPadding[:4] + "class test avg:" + buttonPadding[:4]
 clear_button = buttonPadding + "clear list:" + buttonPadding
 class_work_avg=buttonPadding[:2] + "class work avg:" + buttonPadding[:1]
-
+# program info stuff
+progNam = "Grade Book"
+verNum = "v1.1.0"
+aboutMsg = f'About {progNam} {verNum}'
+# top menu bar layout
 # ------  Menu Definition ------ #    
 #  |  -------------------------  |
 #  |  | New  Edit  Help       |  |
@@ -16,9 +20,6 @@ class_work_avg=buttonPadding[:2] + "class work avg:" + buttonPadding[:1]
 # new has more then one possible menu context, 
 # the main menu is a logical grouping of the sub-menus events,
 # so the sub-menu events should be the events listened for.
-progNam = "Grade Book"
-verNum = "v1.1.0"
-aboutMsg = f'About {progNam} {verNum}'
 menu_def = [['New', ['Student', 'Class Section', 'Exit'  ]],      
                 ['Edit', ['Paste', ['Special', 'Normal', ], 'Undo'], ],      
                 ['Help', 'About...'], ]
@@ -58,6 +59,7 @@ grade_viewer_column = [
     [sg.Listbox(size=(60, 30),values=["Choose a student"], enable_events=True, key="-chose student-")],
     
 ]
+
 bottom_row = [sg.Text(size=(60,1)), sg.Text(size=(45,1)),sg.Text(verNum,)]
 layout = [
     [sg.Menu(menu_def, )],
