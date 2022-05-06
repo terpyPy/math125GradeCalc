@@ -1,5 +1,6 @@
 #  Author:      Cameron Kerley
 #  Date:        04/28/22
+#  Description: This function takes a list of inputs and returns a list of data
 def getReturnArray(prompt_arr:list, return_arr:list, start_str:str, stop:int=1)->list:
     # for invalid input call self recursively to re-prompt user for data
     for i in range(len(prompt_arr) - stop):
@@ -25,6 +26,8 @@ def promptStrBuilder()->list:
         result.append(f'{startEndArr[0]} {midArr[i]} {startEndArr[1]}')
     result.append('score in percent for test: ')
     return result
+
+
 
 def intSanityCheck(caseArr:list)->list:
      # to evaluate if the data recived is valid check if the data is an int
@@ -55,3 +58,4 @@ def promptFunctions(promptArr: list, returnArr, startStr:str='Please enter ')->l
     # take only 1-9 values, 10 term exams is unreasonable, cast to int 
     returnArr = [int(testTaken[0]), int(testsTotal[0])]
     return  returnArr
+

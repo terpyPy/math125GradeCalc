@@ -1,14 +1,17 @@
 class Student:
-    def __init__(self, ID, sectionNum, currentGrade:str='default'):
+    def __init__(self, ID, sectionNum, currentGrade:str='default, default, default, default'):
         self.studentID = ID
         self.sectionNum = sectionNum
         self.name = 'student_' + str(ID)+'_section_'+str(self.sectionNum)+'_'
-        self.currentGrade = currentGrade.split(",")
+        if isinstance(currentGrade, str):
+            self.currentGrade = currentGrade.split(",")[:4]
+        else:
+            self.currentGrade = currentGrade
         self.classTotal = self.currentGrade[0]
         self.testTotal = self.currentGrade[1]
         self.classWorkTotal = self.currentGrade[2]
         self.checkAndSetsTotal = self.currentGrade[3]
-        
+       
     def setclassTotal(self, grade:str):
         Total = self.classTotal.split(" ")
         Total[3] = str(float(grade)) + '%'
@@ -35,12 +38,24 @@ class Student:
     
     def getGrade(self)->str:
         return self.currentGrade
+    
     def getClassTotal(self):
         Total = self.classTotal.split(" ")
-        # Total[3] = str(float(grade))
         num = float(Total[3][:-1])
         return num
+    
+    def getClassWorkTotal(self):
+        Total = self.classWorkTotal.split(" ")
+        num = float(Total[4][:-1]) / 0.25
+        return num
+    
+    def getTestTotal(self):
+        Total = self.testTotal.split(" ")
+        num = float(Total[4][:-1]) / (0.15 *4)
+        return num
+    
     def getStudentID(self):
         return self.studentID
+    
     def getStudentName(self):
         return self.name

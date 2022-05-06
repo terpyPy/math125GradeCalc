@@ -1,27 +1,29 @@
-from Student import Student
+import time
 from mathClass import MathClass
 import random
 import gradeCalc
-import PySimpleGUI as sg
+
 
 
 def main(numStudents=1000, ui:bool=False)->MathClass:
+    startTime = time.time()
     schoolClass = MathClass(1, [])
-    msgs:str = 'Initializing...'
+    # msgs:str = 'Initializing...'
     for i in range(numStudents):
-        sg.one_line_progress_meter('Making students', 
-                                   i+1, 
-                                   numStudents, 
-                                   'key', 
-                                   msgs,
-                                   makeStudent(schoolClass, i))
+        # sg.one_line_progress_meter('Making students', 
+        #                            i+1, 
+        #                            numStudents, 
+        #                            'key', 
+        #                            msgs,
+        #                            makeStudent(schoolClass, i))
+        makeStudent(schoolClass, i)
         
-    # runTime = time.time() - startTime
-    # print(f'Time to create class: {runTime}')
-    schoolClass.students.sort(key=lambda x: x.getStudentID())
+    runTime = time.time() - startTime
+    print(f'Time to create class: {runTime}')
+    schoolClass.sortStudents()
     return schoolClass
         
-def makeStudent(schoolClass, i)->Student:
+def makeStudent(schoolClass:MathClass, i)->str:
     test = [[4,3],
                 [
                     [random.randrange(50,100),
@@ -32,9 +34,9 @@ def makeStudent(schoolClass, i)->Student:
                 random.randrange(60,100)
                 ]
     studentGrades = gradeCalc.uiVersion(test)
-    schoolClass.addStudent(Student(i, schoolClass.sectionNumber, studentGrades))
+    schoolClass.addStudent(i, studentGrades)
     
-    return schoolClass.students[i].getStudentName() + 'loaded...'
+    # return schoolClass.students[i].getStudentName() + 'loaded...'
     
 if __name__ == '__main__':
-    x = main(1000)
+    x = main(20000)
