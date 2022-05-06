@@ -5,9 +5,9 @@ script for utk math 125 grade speculation
 
 # UPDATES
 - version 1.1.0 patch:
-- 1) over all functionality refactor
-- 2) streamlined data input, sanity, and class inheritance
-- 3) encapsulated data retrieval to the proper scope and moved function that manipulate class data to there respective class method equivalents. 
+  1) over all functionality refactor
+  2) streamlined data input, sanity, and class inheritance
+  3) encapsulated data retrieval to the proper scope and moved function that manipulate class data to there respective class method equivalents. 
 
 
 ## added:
