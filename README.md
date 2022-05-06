@@ -11,8 +11,8 @@ script for utk math 125 grade speculation
 
 
 ## added:
--MathClass.sort method
--MathClass.get<gradecategory>Average methods
+1. MathClass.sort method
+2. MathClass.get<gradecategory>Average methods
 ### UI:
 - UI events and interaction with MathClass rescoped, top bar menus added
 - Additions: The "New" was tab added
