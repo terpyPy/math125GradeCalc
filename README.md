@@ -15,8 +15,8 @@ script for utk math 125 grade speculation
 -MathClass.get<gradecategory>Average methods
 ### UI:
 - UI events and interaction with MathClass rescoped, top bar menus added
-- 1) New tab added,:
-- 2)function, adds a new student based on student 0, which is not displayed to the user, and used only as a reference to inti a new student.
+- Additions: The "New" was tab added
+- - Function: adds a new student based on student 0, which is not displayed to the user, and used only as a reference to inti a new student.
   
 ![image](https://user-images.githubusercontent.com/66324329/167185086-215fc535-605f-4ded-aeb1-d0d94bace51f.png)
  
