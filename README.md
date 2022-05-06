@@ -1,18 +1,18 @@
 # math125GradeCalc
 student & mathClass classes, provide functionality for studentDataBase.py, makes a searchable database of fake students with unique id numbers, UIDnames, and grade totals. database search is a binary search with a maximum lookup of 20 in 1 mill + students.
-  # UPDATES:
+  ## UPDATES:
   - version 1.1.0 patch:
     1) over all functionality refactor
     2) streamlined data input, sanity, and class inheritance
     3) encapsulated data retrieval to the proper scope and moved function that manipulate class data to there respective          class method equivalents. 
 
 
-    ## added:
-    1. MathClass.sort method
-    2. MathClass.get<gradecategory>Average methods
-  ## UI:
-    - UI events and interaction with MathClass rescoped, top bar menus added
-    - Additions: The "New" was tab added
+    ### added:
+      1. MathClass.sort method
+      2. MathClass.get<gradecategory>Average methods
+    ### UI:
+      - UI events and interaction with MathClass rescoped, top bar menus added
+      - Additions: The "New" was tab added
       - Function: adds a new student based on student 0, which is not displayed to the user, and used only as a reference to inti a new student.
   
 ![image](https://user-images.githubusercontent.com/66324329/167185086-215fc535-605f-4ded-aeb1-d0d94bace51f.png)
