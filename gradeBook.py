@@ -18,7 +18,7 @@ clear_button = buttonPadding[:2] + "change section:" + buttonPadding[:0]
 class_work_avg=buttonPadding[:2] + "class work avg:" + buttonPadding[:1]
 # program info stuff
 progNam = "Grade Book"
-verNum = "v1.1.3"
+verNum = "v1.1.4"
 aboutMsg = f'About {progNam} {verNum}'
 placeHolder = '_DEFAULT_'
 # top menu bar layout
