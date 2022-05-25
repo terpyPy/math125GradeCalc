@@ -55,7 +55,7 @@ class Student:
         return num
     
     def getStudentID(self):
-        return self.studentID
+        return int(self.studentID)
     
     def getStudentName(self):
         return self.name

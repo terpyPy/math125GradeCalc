@@ -10,7 +10,7 @@ import numpy as np
 #
 # TODO: No current TODO's 
 class MathClass(Student):
-    def __init__(self, sectionNumber, grades='default, default, default, default'):
+    def __init__(self, sectionNumber=-1, grades='default, default, default, default'):
         self.sectionNum = sectionNumber
         super().__init__(0, self.sectionNum, grades)
         self.students:list[Student] = []
@@ -77,9 +77,9 @@ class MathClass(Student):
             i+=1
             mid = (low + high) // 2
             student:Student = self.students[mid]
-            if student.getStudentID() < studentName:
+            if int(student.getStudentID()) < studentName:
                 low = mid + 1
-            elif student.getStudentID() > studentName:
+            elif int(student.getStudentID()) > studentName:
                 high = mid - 1
             else:
                 print(i)
