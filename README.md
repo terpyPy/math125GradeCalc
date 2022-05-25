@@ -10,13 +10,18 @@ student & mathClass classes, provide functionality for studentDataBase.py, makes
     ### added:
       1. MathClass.sort method
       2. MathClass.get<gradecategory>Average methods
+      3. Sections graphs calculations with RMSE, and plotting
     ### UI:
       - UI events and interaction with MathClass rescoped, top bar menus added
       - Additions: The "New" was tab added
-      - Function: adds a new student based on student 0, which is not displayed to the user, and used only as a reference to inti a new student.
-  
-![image](https://user-images.githubusercontent.com/66324329/167185086-215fc535-605f-4ded-aeb1-d0d94bace51f.png)
- 
+      - Function: adds a new student based on student 0, which is not displayed to the user, and used only as a reference to inti a new student
+    ### v1.1.4 UI aaddtions:
+      - added: new class sections and new student creation with top menu bar.
+      - added: scatter plot funtion for class sections show test avg, class avg relation ship uses RMSE to plot best fit.
+
+![image](https://user-images.githubusercontent.com/66324329/169870478-df57465a-7927-462a-9906-40eb8a64a69a.png)
+![image](https://user-images.githubusercontent.com/66324329/169871225-84df091a-3eae-4f91-a220-44aa79ed34cd.png)
+
 # old
 added the Student & mathClass classes, provide functionality for studentDataBase.py, makes a searchable database of fake students with unique id numbers, UIDnames, and grade totals. database search is a binary search with a maximum lookup of 20 in 1 mill + students.
   
