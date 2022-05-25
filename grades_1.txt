@@ -1,0 +1,744 @@
+student_1_section_1_ :
+current grade is:--- 67.05%,
+test point total is:--- 44.85 / 60.0,
+class work total is:--- 12.75 / 25.0,
+checks & sets total is:--- 9.45 / 15.0,
+#
+student_2_section_1_ :
+current grade is:--- 74.65%,
+test point total is:--- 43.2 / 60.0,
+class work total is:--- 21.25 / 25.0,
+checks & sets total is:--- 10.2 / 15.0,
+#
+student_3_section_1_ :
+current grade is:--- 67.0%,
+test point total is:--- 34.8 / 60.0,
+class work total is:--- 19.75 / 25.0,
+checks & sets total is:--- 12.45 / 15.0,
+#
+student_4_section_1_ :
+current grade is:--- 73.75%,
+test point total is:--- 34.65 / 60.0,
+class work total is:--- 24.25 / 25.0,
+checks & sets total is:--- 14.85 / 15.0,
+#
+student_5_section_1_ :
+current grade is:--- 67.4%,
+test point total is:--- 39.0 / 60.0,
+class work total is:--- 16.25 / 25.0,
+checks & sets total is:--- 12.15 / 15.0,
+#
+student_6_section_1_ :
+current grade is:--- 73.05%,
+test point total is:--- 45.74999999999999 / 60.0,
+class work total is:--- 18.0 / 25.0,
+checks & sets total is:--- 9.3 / 15.0,
+#
+student_7_section_1_ :
+current grade is:--- 73.95%,
+test point total is:--- 42.9 / 60.0,
+class work total is:--- 16.5 / 25.0,
+checks & sets total is:--- 14.55 / 15.0,
+#
+student_8_section_1_ :
+current grade is:--- 72.3%,
+test point total is:--- 41.7 / 60.0,
+class work total is:--- 15.75 / 25.0,
+checks & sets total is:--- 14.85 / 15.0,
+#
+student_9_section_1_ :
+current grade is:--- 72.5%,
+test point total is:--- 48.14999999999999 / 60.0,
+class work total is:--- 11.75 / 25.0,
+checks & sets total is:--- 12.6 / 15.0,
+#
+student_10_section_1_ :
+current grade is:--- 69.6%,
+test point total is:--- 39.45 / 60.0,
+class work total is:--- 16.5 / 25.0,
+checks & sets total is:--- 13.65 / 15.0,
+#
+student_11_section_1_ :
+current grade is:--- 74.4%,
+test point total is:--- 45.900000000000006 / 60.0,
+class work total is:--- 18.0 / 25.0,
+checks & sets total is:--- 10.5 / 15.0,
+#
+student_12_section_1_ :
+current grade is:--- 62.05%,
+test point total is:--- 42.15 / 60.0,
+class work total is:--- 10.75 / 25.0,
+checks & sets total is:--- 9.15 / 15.0,
+#
+student_13_section_1_ :
+current grade is:--- 64.9%,
+test point total is:--- 37.349999999999994 / 60.0,
+class work total is:--- 16.75 / 25.0,
+checks & sets total is:--- 10.8 / 15.0,
+#
+student_14_section_1_ :
+current grade is:--- 79.35%,
+test point total is:--- 45.45 / 60.0,
+class work total is:--- 19.5 / 25.0,
+checks & sets total is:--- 14.4 / 15.0,
+#
+student_15_section_1_ :
+current grade is:--- 70.2%,
+test point total is:--- 38.25 / 60.0,
+class work total is:--- 19.5 / 25.0,
+checks & sets total is:--- 12.45 / 15.0,
+#
+student_16_section_1_ :
+current grade is:--- 77.1%,
+test point total is:--- 45.0 / 60.0,
+class work total is:--- 18.75 / 25.0,
+checks & sets total is:--- 13.35 / 15.0,
+#
+student_17_section_1_ :
+current grade is:--- 72.3%,
+test point total is:--- 42.6 / 60.0,
+class work total is:--- 16.5 / 25.0,
+checks & sets total is:--- 13.2 / 15.0,
+#
+student_18_section_1_ :
+current grade is:--- 73.55%,
+test point total is:--- 48.0 / 60.0,
+class work total is:--- 14.0 / 25.0,
+checks & sets total is:--- 11.55 / 15.0,
+#
+student_19_section_1_ :
+current grade is:--- 67.0%,
+test point total is:--- 46.5 / 60.0,
+class work total is:--- 11.5 / 25.0,
+checks & sets total is:--- 9.0 / 15.0,
+#
+student_20_section_1_ :
+current grade is:--- 78.75%,
+test point total is:--- 52.650000000000006 / 60.0,
+class work total is:--- 13.5 / 25.0,
+checks & sets total is:--- 12.6 / 15.0,
+#
+student_21_section_1_ :
+current grade is:--- 64.8%,
+test point total is:--- 40.800000000000004 / 60.0,
+class work total is:--- 12.0 / 25.0,
+checks & sets total is:--- 12.0 / 15.0,
+#
+student_22_section_1_ :
+current grade is:--- 69.55%,
+test point total is:--- 40.65 / 60.0,
+class work total is:--- 17.5 / 25.0,
+checks & sets total is:--- 11.4 / 15.0,
+#
+student_23_section_1_ :
+current grade is:--- 82.1%,
+test point total is:--- 46.8 / 60.0,
+class work total is:--- 20.75 / 25.0,
+checks & sets total is:--- 14.55 / 15.0,
+#
+student_24_section_1_ :
+current grade is:--- 78.65%,
+test point total is:--- 42.599999999999994 / 60.0,
+class work total is:--- 21.5 / 25.0,
+checks & sets total is:--- 14.55 / 15.0,
+#
+student_25_section_1_ :
+current grade is:--- 67.25%,
+test point total is:--- 40.05 / 60.0,
+class work total is:--- 14.75 / 25.0,
+checks & sets total is:--- 12.45 / 15.0,
+#
+student_26_section_1_ :
+current grade is:--- 75.2%,
+test point total is:--- 46.949999999999996 / 60.0,
+class work total is:--- 17.75 / 25.0,
+checks & sets total is:--- 10.5 / 15.0,
+#
+student_27_section_1_ :
+current grade is:--- 68.0%,
+test point total is:--- 41.25 / 60.0,
+class work total is:--- 17.75 / 25.0,
+checks & sets total is:--- 9.0 / 15.0,
+#
+student_28_section_1_ :
+current grade is:--- 72.45%,
+test point total is:--- 44.25 / 60.0,
+class work total is:--- 15.0 / 25.0,
+checks & sets total is:--- 13.2 / 15.0,
+#
+student_29_section_1_ :
+current grade is:--- 79.35%,
+test point total is:--- 44.25 / 60.0,
+class work total is:--- 22.5 / 25.0,
+checks & sets total is:--- 12.6 / 15.0,
+#
+student_30_section_1_ :
+current grade is:--- 74.8%,
+test point total is:--- 40.2 / 60.0,
+class work total is:--- 22.0 / 25.0,
+checks & sets total is:--- 12.6 / 15.0,
+#
+student_31_section_1_ :
+current grade is:--- 53.15%,
+test point total is:--- 28.800000000000004 / 60.0,
+class work total is:--- 11.75 / 25.0,
+checks & sets total is:--- 12.6 / 15.0,
+#
+student_32_section_1_ :
+current grade is:--- 77.2%,
+test point total is:--- 50.550000000000004 / 60.0,
+class work total is:--- 16.75 / 25.0,
+checks & sets total is:--- 9.9 / 15.0,
+#
+student_33_section_1_ :
+current grade is:--- 59.0%,
+test point total is:--- 38.849999999999994 / 60.0,
+class work total is:--- 10.25 / 25.0,
+checks & sets total is:--- 9.9 / 15.0,
+#
+student_34_section_1_ :
+current grade is:--- 70.25%,
+test point total is:--- 39.45 / 60.0,
+class work total is:--- 19.25 / 25.0,
+checks & sets total is:--- 11.55 / 15.0,
+#
+student_35_section_1_ :
+current grade is:--- 67.1%,
+test point total is:--- 39.0 / 60.0,
+class work total is:--- 17.75 / 25.0,
+checks & sets total is:--- 10.35 / 15.0,
+#
+student_36_section_1_ :
+current grade is:--- 76.15%,
+test point total is:--- 47.099999999999994 / 60.0,
+class work total is:--- 18.25 / 25.0,
+checks & sets total is:--- 10.8 / 15.0,
+#
+student_37_section_1_ :
+current grade is:--- 61.7%,
+test point total is:--- 34.95 / 60.0,
+class work total is:--- 17.0 / 25.0,
+checks & sets total is:--- 9.75 / 15.0,
+#
+student_38_section_1_ :
+current grade is:--- 60.35%,
+test point total is:--- 37.35 / 60.0,
+class work total is:--- 11.75 / 25.0,
+checks & sets total is:--- 11.25 / 15.0,
+#
+student_39_section_1_ :
+current grade is:--- 66.75%,
+test point total is:--- 35.55 / 60.0,
+class work total is:--- 20.25 / 25.0,
+checks & sets total is:--- 10.95 / 15.0,
+#
+student_40_section_1_ :
+current grade is:--- 68.85%,
+test point total is:--- 39.449999999999996 / 60.0,
+class work total is:--- 16.5 / 25.0,
+checks & sets total is:--- 12.9 / 15.0,
+#
+student_41_section_1_ :
+current grade is:--- 84.8%,
+test point total is:--- 52.2 / 60.0,
+class work total is:--- 21.5 / 25.0,
+checks & sets total is:--- 11.1 / 15.0,
+#
+student_42_section_1_ :
+current grade is:--- 79.85%,
+test point total is:--- 46.2 / 60.0,
+class work total is:--- 20.0 / 25.0,
+checks & sets total is:--- 13.65 / 15.0,
+#
+student_43_section_1_ :
+current grade is:--- 69.15%,
+test point total is:--- 45.75 / 60.0,
+class work total is:--- 11.25 / 25.0,
+checks & sets total is:--- 12.15 / 15.0,
+#
+student_44_section_1_ :
+current grade is:--- 77.1%,
+test point total is:--- 40.5 / 60.0,
+class work total is:--- 24.75 / 25.0,
+checks & sets total is:--- 11.85 / 15.0,
+#
+student_45_section_1_ :
+current grade is:--- 78.25%,
+test point total is:--- 45.0 / 60.0,
+class work total is:--- 19.75 / 25.0,
+checks & sets total is:--- 13.5 / 15.0,
+#
+student_46_section_1_ :
+current grade is:--- 67.2%,
+test point total is:--- 35.25 / 60.0,
+class work total is:--- 21.75 / 25.0,
+checks & sets total is:--- 10.2 / 15.0,
+#
+student_47_section_1_ :
+current grade is:--- 78.05%,
+test point total is:--- 49.5 / 60.0,
+class work total is:--- 18.5 / 25.0,
+checks & sets total is:--- 10.05 / 15.0,
+#
+student_48_section_1_ :
+current grade is:--- 69.2%,
+test point total is:--- 41.7 / 60.0,
+class work total is:--- 14.0 / 25.0,
+checks & sets total is:--- 13.5 / 15.0,
+#
+student_49_section_1_ :
+current grade is:--- 65.9%,
+test point total is:--- 35.25 / 60.0,
+class work total is:--- 16.25 / 25.0,
+checks & sets total is:--- 14.4 / 15.0,
+#
+student_50_section_1_ :
+current grade is:--- 66.15%,
+test point total is:--- 42.0 / 60.0,
+class work total is:--- 12.75 / 25.0,
+checks & sets total is:--- 11.4 / 15.0,
+#
+student_51_section_1_ :
+current grade is:--- 70.35%,
+test point total is:--- 38.4 / 60.0,
+class work total is:--- 21.0 / 25.0,
+checks & sets total is:--- 10.95 / 15.0,
+#
+student_52_section_1_ :
+current grade is:--- 64.95%,
+test point total is:--- 34.05 / 60.0,
+class work total is:--- 21.75 / 25.0,
+checks & sets total is:--- 9.15 / 15.0,
+#
+student_53_section_1_ :
+current grade is:--- 66.05%,
+test point total is:--- 30.0 / 60.0,
+class work total is:--- 22.25 / 25.0,
+checks & sets total is:--- 13.8 / 15.0,
+#
+student_54_section_1_ :
+current grade is:--- 66.55%,
+test point total is:--- 40.95 / 60.0,
+class work total is:--- 13.0 / 25.0,
+checks & sets total is:--- 12.6 / 15.0,
+#
+student_55_section_1_ :
+current grade is:--- 74.65%,
+test point total is:--- 45.0 / 60.0,
+class work total is:--- 15.25 / 25.0,
+checks & sets total is:--- 14.4 / 15.0,
+#
+student_56_section_1_ :
+current grade is:--- 69.7%,
+test point total is:--- 48.150000000000006 / 60.0,
+class work total is:--- 11.5 / 25.0,
+checks & sets total is:--- 10.05 / 15.0,
+#
+student_57_section_1_ :
+current grade is:--- 81.25%,
+test point total is:--- 47.10000000000001 / 60.0,
+class work total is:--- 19.75 / 25.0,
+checks & sets total is:--- 14.4 / 15.0,
+#
+student_58_section_1_ :
+current grade is:--- 82.8%,
+test point total is:--- 43.95 / 60.0,
+class work total is:--- 24.0 / 25.0,
+checks & sets total is:--- 14.85 / 15.0,
+#
+student_59_section_1_ :
+current grade is:--- 87.8%,
+test point total is:--- 48.75000000000001 / 60.0,
+class work total is:--- 24.5 / 25.0,
+checks & sets total is:--- 14.55 / 15.0,
+#
+student_60_section_1_ :
+current grade is:--- 73.95%,
+test point total is:--- 37.35 / 60.0,
+class work total is:--- 24.75 / 25.0,
+checks & sets total is:--- 11.85 / 15.0,
+#
+student_61_section_1_ :
+current grade is:--- 76.65%,
+test point total is:--- 46.35000000000001 / 60.0,
+class work total is:--- 19.5 / 25.0,
+checks & sets total is:--- 10.8 / 15.0,
+#
+student_62_section_1_ :
+current grade is:--- 75.1%,
+test point total is:--- 43.349999999999994 / 60.0,
+class work total is:--- 21.25 / 25.0,
+checks & sets total is:--- 10.5 / 15.0,
+#
+student_63_section_1_ :
+current grade is:--- 81.4%,
+test point total is:--- 50.4 / 60.0,
+class work total is:--- 19.75 / 25.0,
+checks & sets total is:--- 11.25 / 15.0,
+#
+student_64_section_1_ :
+current grade is:--- 71.65%,
+test point total is:--- 39.45 / 60.0,
+class work total is:--- 19.75 / 25.0,
+checks & sets total is:--- 12.45 / 15.0,
+#
+student_65_section_1_ :
+current grade is:--- 74.8%,
+test point total is:--- 45.9 / 60.0,
+class work total is:--- 19.75 / 25.0,
+checks & sets total is:--- 9.15 / 15.0,
+#
+student_66_section_1_ :
+current grade is:--- 77.95%,
+test point total is:--- 46.8 / 60.0,
+class work total is:--- 20.5 / 25.0,
+checks & sets total is:--- 10.65 / 15.0,
+#
+student_67_section_1_ :
+current grade is:--- 76.05%,
+test point total is:--- 39.599999999999994 / 60.0,
+class work total is:--- 21.75 / 25.0,
+checks & sets total is:--- 14.7 / 15.0,
+#
+student_68_section_1_ :
+current grade is:--- 57.85%,
+test point total is:--- 38.699999999999996 / 60.0,
+class work total is:--- 10.0 / 25.0,
+checks & sets total is:--- 9.15 / 15.0,
+#
+student_69_section_1_ :
+current grade is:--- 71.1%,
+test point total is:--- 41.25 / 60.0,
+class work total is:--- 20.25 / 25.0,
+checks & sets total is:--- 9.6 / 15.0,
+#
+student_70_section_1_ :
+current grade is:--- 68.05%,
+test point total is:--- 39.6 / 60.0,
+class work total is:--- 13.75 / 25.0,
+checks & sets total is:--- 14.7 / 15.0,
+#
+student_71_section_1_ :
+current grade is:--- 80.7%,
+test point total is:--- 41.849999999999994 / 60.0,
+class work total is:--- 24.75 / 25.0,
+checks & sets total is:--- 14.1 / 15.0,
+#
+student_72_section_1_ :
+current grade is:--- 77.45%,
+test point total is:--- 43.95 / 60.0,
+class work total is:--- 24.5 / 25.0,
+checks & sets total is:--- 9.0 / 15.0,
+#
+student_73_section_1_ :
+current grade is:--- 84.55%,
+test point total is:--- 52.05 / 60.0,
+class work total is:--- 19.75 / 25.0,
+checks & sets total is:--- 12.75 / 15.0,
+#
+student_74_section_1_ :
+current grade is:--- 71.6%,
+test point total is:--- 34.8 / 60.0,
+class work total is:--- 23.75 / 25.0,
+checks & sets total is:--- 13.05 / 15.0,
+#
+student_75_section_1_ :
+current grade is:--- 77.85%,
+test point total is:--- 41.25 / 60.0,
+class work total is:--- 23.25 / 25.0,
+checks & sets total is:--- 13.35 / 15.0,
+#
+student_76_section_1_ :
+current grade is:--- 60.7%,
+test point total is:--- 37.2 / 60.0,
+class work total is:--- 10.0 / 25.0,
+checks & sets total is:--- 13.5 / 15.0,
+#
+student_77_section_1_ :
+current grade is:--- 65.9%,
+test point total is:--- 35.1 / 60.0,
+class work total is:--- 17.75 / 25.0,
+checks & sets total is:--- 13.05 / 15.0,
+#
+student_78_section_1_ :
+current grade is:--- 73.55%,
+test point total is:--- 40.2 / 60.0,
+class work total is:--- 19.25 / 25.0,
+checks & sets total is:--- 14.1 / 15.0,
+#
+student_79_section_1_ :
+current grade is:--- 72.95%,
+test point total is:--- 46.5 / 60.0,
+class work total is:--- 17.0 / 25.0,
+checks & sets total is:--- 9.45 / 15.0,
+#
+student_80_section_1_ :
+current grade is:--- 79.0%,
+test point total is:--- 48.3 / 60.0,
+class work total is:--- 20.5 / 25.0,
+checks & sets total is:--- 10.2 / 15.0,
+#
+student_81_section_1_ :
+current grade is:--- 68.15%,
+test point total is:--- 39.6 / 60.0,
+class work total is:--- 14.0 / 25.0,
+checks & sets total is:--- 14.55 / 15.0,
+#
+student_82_section_1_ :
+current grade is:--- 70.6%,
+test point total is:--- 44.849999999999994 / 60.0,
+class work total is:--- 13.0 / 25.0,
+checks & sets total is:--- 12.75 / 15.0,
+#
+student_83_section_1_ :
+current grade is:--- 59.55%,
+test point total is:--- 36.9 / 60.0,
+class work total is:--- 12.75 / 25.0,
+checks & sets total is:--- 9.9 / 15.0,
+#
+student_84_section_1_ :
+current grade is:--- 67.8%,
+test point total is:--- 37.8 / 60.0,
+class work total is:--- 21.0 / 25.0,
+checks & sets total is:--- 9.0 / 15.0,
+#
+student_85_section_1_ :
+current grade is:--- 77.1%,
+test point total is:--- 40.050000000000004 / 60.0,
+class work total is:--- 24.75 / 25.0,
+checks & sets total is:--- 12.3 / 15.0,
+#
+student_86_section_1_ :
+current grade is:--- 76.55%,
+test point total is:--- 41.400000000000006 / 60.0,
+class work total is:--- 22.25 / 25.0,
+checks & sets total is:--- 12.9 / 15.0,
+#
+student_87_section_1_ :
+current grade is:--- 67.8%,
+test point total is:--- 40.5 / 60.0,
+class work total is:--- 12.75 / 25.0,
+checks & sets total is:--- 14.55 / 15.0,
+#
+student_88_section_1_ :
+current grade is:--- 79.8%,
+test point total is:--- 48.75 / 60.0,
+class work total is:--- 17.25 / 25.0,
+checks & sets total is:--- 13.8 / 15.0,
+#
+student_89_section_1_ :
+current grade is:--- 82.05%,
+test point total is:--- 50.25 / 60.0,
+class work total is:--- 21.75 / 25.0,
+checks & sets total is:--- 10.05 / 15.0,
+#
+student_90_section_1_ :
+current grade is:--- 81.4%,
+test point total is:--- 49.8 / 60.0,
+class work total is:--- 22.0 / 25.0,
+checks & sets total is:--- 9.6 / 15.0,
+#
+student_91_section_1_ :
+current grade is:--- 81.65%,
+test point total is:--- 50.85 / 60.0,
+class work total is:--- 17.75 / 25.0,
+checks & sets total is:--- 13.05 / 15.0,
+#
+student_92_section_1_ :
+current grade is:--- 71.6%,
+test point total is:--- 39.75 / 60.0,
+class work total is:--- 20.75 / 25.0,
+checks & sets total is:--- 11.1 / 15.0,
+#
+student_93_section_1_ :
+current grade is:--- 69.45%,
+test point total is:--- 43.95 / 60.0,
+class work total is:--- 13.5 / 25.0,
+checks & sets total is:--- 12.0 / 15.0,
+#
+student_94_section_1_ :
+current grade is:--- 78.55%,
+test point total is:--- 45.15 / 60.0,
+class work total is:--- 24.25 / 25.0,
+checks & sets total is:--- 9.15 / 15.0,
+#
+student_95_section_1_ :
+current grade is:--- 74.75%,
+test point total is:--- 46.35 / 60.0,
+class work total is:--- 14.75 / 25.0,
+checks & sets total is:--- 13.65 / 15.0,
+#
+student_96_section_1_ :
+current grade is:--- 61.25%,
+test point total is:--- 38.25 / 60.0,
+class work total is:--- 13.25 / 25.0,
+checks & sets total is:--- 9.75 / 15.0,
+#
+student_97_section_1_ :
+current grade is:--- 67.45%,
+test point total is:--- 44.849999999999994 / 60.0,
+class work total is:--- 13.0 / 25.0,
+checks & sets total is:--- 9.6 / 15.0,
+#
+student_98_section_1_ :
+current grade is:--- 62.65%,
+test point total is:--- 39.0 / 60.0,
+class work total is:--- 12.25 / 25.0,
+checks & sets total is:--- 11.4 / 15.0,
+#
+student_99_section_1_ :
+current grade is:--- 65.7%,
+test point total is:--- 31.8 / 60.0,
+class work total is:--- 19.5 / 25.0,
+checks & sets total is:--- 14.4 / 15.0,
+#
+student_100_section_1_ :
+current grade is:--- 87.5%,
+test point total is:--- 52.05 / 60.0,
+class work total is:--- 21.5 / 25.0,
+checks & sets total is:--- 13.95 / 15.0,
+#
+student_101_section_1_ :
+current grade is:--- 65.65%,
+test point total is:--- 45.0 / 60.0,
+class work total is:--- 11.5 / 25.0,
+checks & sets total is:--- 9.15 / 15.0,
+#
+student_102_section_1_ :
+current grade is:--- 60.3%,
+test point total is:--- 36.6 / 60.0,
+class work total is:--- 13.5 / 25.0,
+checks & sets total is:--- 10.2 / 15.0,
+#
+student_103_section_1_ :
+current grade is:--- 72.35%,
+test point total is:--- 42.3 / 60.0,
+class work total is:--- 20.75 / 25.0,
+checks & sets total is:--- 9.3 / 15.0,
+#
+student_104_section_1_ :
+current grade is:--- 71.8%,
+test point total is:--- 45.3 / 60.0,
+class work total is:--- 12.25 / 25.0,
+checks & sets total is:--- 14.25 / 15.0,
+#
+student_105_section_1_ :
+current grade is:--- 70.75%,
+test point total is:--- 41.55 / 60.0,
+class work total is:--- 19.0 / 25.0,
+checks & sets total is:--- 10.2 / 15.0,
+#
+student_106_section_1_ :
+current grade is:--- 85.45%,
+test point total is:--- 49.35 / 60.0,
+class work total is:--- 23.5 / 25.0,
+checks & sets total is:--- 12.6 / 15.0,
+#
+student_107_section_1_ :
+current grade is:--- 62.8%,
+test point total is:--- 40.35 / 60.0,
+class work total is:--- 11.5 / 25.0,
+checks & sets total is:--- 10.95 / 15.0,
+#
+student_108_section_1_ :
+current grade is:--- 79.35%,
+test point total is:--- 51.15 / 60.0,
+class work total is:--- 14.25 / 25.0,
+checks & sets total is:--- 13.95 / 15.0,
+#
+student_109_section_1_ :
+current grade is:--- 75.35%,
+test point total is:--- 39.45 / 60.0,
+class work total is:--- 21.5 / 25.0,
+checks & sets total is:--- 14.4 / 15.0,
+#
+student_110_section_1_ :
+current grade is:--- 65.95%,
+test point total is:--- 40.650000000000006 / 60.0,
+class work total is:--- 12.25 / 25.0,
+checks & sets total is:--- 13.05 / 15.0,
+#
+student_111_section_1_ :
+current grade is:--- 60.05%,
+test point total is:--- 39.45 / 60.0,
+class work total is:--- 11.0 / 25.0,
+checks & sets total is:--- 9.6 / 15.0,
+#
+student_112_section_1_ :
+current grade is:--- 68.45%,
+test point total is:--- 37.5 / 60.0,
+class work total is:--- 17.0 / 25.0,
+checks & sets total is:--- 13.95 / 15.0,
+#
+student_113_section_1_ :
+current grade is:--- 72.55%,
+test point total is:--- 39.74999999999999 / 60.0,
+class work total is:--- 20.5 / 25.0,
+checks & sets total is:--- 12.3 / 15.0,
+#
+student_114_section_1_ :
+current grade is:--- 66.1%,
+test point total is:--- 38.550000000000004 / 60.0,
+class work total is:--- 14.5 / 25.0,
+checks & sets total is:--- 13.05 / 15.0,
+#
+student_115_section_1_ :
+current grade is:--- 68.4%,
+test point total is:--- 39.3 / 60.0,
+class work total is:--- 17.25 / 25.0,
+checks & sets total is:--- 11.85 / 15.0,
+#
+student_116_section_1_ :
+current grade is:--- 73.7%,
+test point total is:--- 48.599999999999994 / 60.0,
+class work total is:--- 12.5 / 25.0,
+checks & sets total is:--- 12.6 / 15.0,
+#
+student_117_section_1_ :
+current grade is:--- 73.25%,
+test point total is:--- 44.55 / 60.0,
+class work total is:--- 16.25 / 25.0,
+checks & sets total is:--- 12.45 / 15.0,
+#
+student_118_section_1_ :
+current grade is:--- 69.8%,
+test point total is:--- 39.15 / 60.0,
+class work total is:--- 21.5 / 25.0,
+checks & sets total is:--- 9.15 / 15.0,
+#
+student_119_section_1_ :
+current grade is:--- 63.85%,
+test point total is:--- 38.85 / 60.0,
+class work total is:--- 13.0 / 25.0,
+checks & sets total is:--- 12.0 / 15.0,
+#
+student_120_section_1_ :
+current grade is:--- 66.5%,
+test point total is:--- 39.449999999999996 / 60.0,
+class work total is:--- 15.5 / 25.0,
+checks & sets total is:--- 11.55 / 15.0,
+#
+student_121_section_1_ :
+current grade is:--- 58.8%,
+test point total is:--- 34.8 / 60.0,
+class work total is:--- 13.5 / 25.0,
+checks & sets total is:--- 10.5 / 15.0,
+#
+student_122_section_1_ :
+current grade is:--- 79.05%,
+test point total is:--- 42.15 / 60.0,
+class work total is:--- 24.75 / 25.0,
+checks & sets total is:--- 12.15 / 15.0,
+#
+student_123_section_1_ :
+current grade is:--- 68.05%,
+test point total is:--- 45.599999999999994 / 60.0,
+class work total is:--- 12.25 / 25.0,
+checks & sets total is:--- 10.2 / 15.0,
+#
+student_124_section_1_ :
+current grade is:--- 76.1%,
+test point total is:--- 45.300000000000004 / 60.0,
+class work total is:--- 19.25 / 25.0,
+checks & sets total is:--- 11.55 / 15.0,
+#

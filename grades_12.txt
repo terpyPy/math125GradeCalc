@@ -1,0 +1,24 @@
+student_1_section_12_ :
+current grade is:--- 40.0%,
+test point total is:--- 25.0 / 60.0,
+class work total is:--- 11.4 / 25.0,
+checks & sets total is:--- 6.9 / 15.0,
+#
+student_2_section_12_ :
+current grade is:--- 98.0%,
+test point total is:--- 59.9 / 60.0,
+class work total is:--- 24.5 / 25.0,
+checks & sets total is:--- 13.3 / 15.0,
+#
+student_3_section_12_ :
+current grade is:--- 67.9%,
+test point total is:--- 12.0 / 60.0,
+class work total is:--- 20.0 / 25.0,
+checks & sets total is:--- 9.98 / 15.0,
+#
+student_4_section_12_ :
+current grade is:--- 77.0%,
+test point total is:--- 42.7 / 60.0,
+class work total is:--- 14.0 / 25.0,
+checks & sets total is:--- 9.5 / 15.0,
+#

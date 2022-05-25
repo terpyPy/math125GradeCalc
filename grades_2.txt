@@ -1,0 +1,24 @@
+student_1_section_2_ :
+current grade is:--- 0.0%,
+test point total is:--- 0.00 / 60.0,
+class work total is:--- 0.0 / 25.0,
+checks & sets total is:--- 0.0 / 15.0,
+#
+student_2_section_2_ :
+current grade is:--- 0.0%,
+test point total is:--- 0.00 / 60.0,
+class work total is:--- 0.0 / 25.0,
+checks & sets total is:--- 0.0 / 15.0,
+#
+student_3_section_2_ :
+current grade is:--- 0.0%,
+test point total is:--- 0.00 / 60.0,
+class work total is:--- 0.0 / 25.0,
+checks & sets total is:--- 0.0 / 15.0,
+#
+student_4_section_2_ :
+current grade is:--- 0.0%,
+test point total is:--- 0.00 / 60.0,
+class work total is:--- 0.0 / 25.0,
+checks & sets total is:--- 0.0 / 15.0,
+#
