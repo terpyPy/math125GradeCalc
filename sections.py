@@ -1,18 +1,23 @@
 from mathClass import MathClass
 import matplotlib.pyplot as plt
 import numpy 
-from scipy.optimize import curve_fit
+# get all the methods needed from sklearn for RMSE 
+from sklearn.preprocessing import PolynomialFeatures
+from sklearn.pipeline import Pipeline
+from sklearn.linear_model import LinearRegression
+from sklearn.metrics import mean_squared_error
 # TODO: add file IO for this to save to and read from a file
 # need to modify the class to be able to read from a file so the constructor 
 # needs to be modified to take a file name as a parameter
+# ------good way to parse fileName and sectionNum from absPath returned by pop up-----
+#           fileNameContents = fileName.split('/')[-1:]
+#           file_sec_num = fileNameContents[0].split('_')[1].split('.')[0]
 class Sections(MathClass):
-    def __init__(self, fileName=None, math_class:MathClass=None, section_numbers:'list[int]'=[-1]):
+    def __init__(self, fileName:str=None, math_class:MathClass=None, section_numbers:'list[int]'=[-1]):
         if math_class is not None:
             self.section_numbers = section_numbers
             self.sectionsDict = {self.section_numbers[0]: math_class}
         elif fileName is not None:
-            # fileNameContents = fileName.split('/')[-1:]
-            # file_sec_num = fileNameContents[0].split('_')[1].split('.')[0]
             
             self.section_numbers = section_numbers
             # create an empty classSection with the first section number
@@ -28,7 +33,7 @@ class Sections(MathClass):
     def getInitSecNum(self):
         return self.INIT_SEC_NUM        
     
-    def addSection(self, section_number:int=-1, file_name=None):
+    def addSection(self, section_number:int=-1, file_name:str=None)->int|None:
         new_class = MathClass(section_number)
         new_class.addStudent(0, self.sectionsDict[self.section_numbers[0]].getStudent(0)[1].copy())
         self.section_numbers.append(section_number)
@@ -36,22 +41,13 @@ class Sections(MathClass):
         if file_name:
             sec_num_read = self.readFromFile(file_name)
             return sec_num_read
-    
         
-    def getSectionDict(self)->'dict[int,MathClass]':
-        return self.sectionsDict
-    
-    def func(self, x, a, b,c):
-        # This best fit line is known as regression line,
-        # and defined by a linear equation Y= a *X + b.
-        return (a * numpy.square(x)) + b * x + c
-    
     def saveToFile(self, fileName:str, section_number:int=1):
         # get the file name and the section number, 
         # the file name is to be written to, 
         section = self.sectionsDict[section_number]
-        currSectionNames = [section.getStudent(i)[0] for i in range(1,len(section.students))]
-        currSectionGrades = [section.getStudent(i)[1] for i in range(1,len(section.students))]
+        currSectionNames = self.sectionsDict[section_number].getStudentNames()
+        currSectionGrades = self.sectionsDict[section_number].getStudentLstGrades()
         with open(fileName, 'w') as f:
             # the section number is the section to write from memory,
             for i in range(len(currSectionNames)):
@@ -105,33 +101,35 @@ class Sections(MathClass):
             f.close()
             return secNum
         
-        
+    def getSectionDict(self)->'dict[int,MathClass]':
+        return self.sectionsDict
+    
+   
     def showPlot1(self,graphWidth=800, graphHeight=600):
         f = plt.figure(figsize=(graphWidth/100.0, graphHeight/100.0), dpi=100)
         axes = f.add_subplot(111)
         for section in self.sectionsDict.values():
+            # plot1= x plot2= y and are numpy arrays
             plot1, plot2 = section.getStudentPlot()
             
-            axes.plot(plot1, plot2, 'D')
+            # creating pipeline and fitting it on data
+            Input=[('polynomial',PolynomialFeatures(degree=5)),('modal',LinearRegression())]
+            pipe=Pipeline(Input)
+            pipe.fit(plot1.reshape(-1,1), plot2.reshape(-1,1))
+            #
+            #
+            poly_pred=pipe.predict(plot1.reshape(-1,1))
+            #sorting predicted values with respect to predictor
+            sorted_zip = sorted(zip(plot1,poly_pred))
+            x_poly, poly_pred = zip(*sorted_zip)
+            print('RMSE for Polynomial Regression=>',numpy.sqrt(mean_squared_error(plot2,poly_pred)))
+            #plotting predictions
         
-            initialParameters = numpy.array([1.0, 1.0, 1.0,])
-            fittedParameters, pcov = curve_fit(self.func, plot1, plot2, initialParameters)
-            modelPredictions = self.func(plot1, *fittedParameters)
-            absError = modelPredictions - plot2
-            
-            SE = numpy.square(absError) # squared errors
-            MSE = numpy.mean(SE) # mean squared errors
-            RMSE = numpy.sqrt(MSE) # Root Mean Squared Error, RMSE
-            Rsquared = 1.0 - (numpy.var(absError) / numpy.var(plot2))
-            print('RMSE:', RMSE/100)
-            print('R-squared:', Rsquared/100)
-            
-            xModel = numpy.linspace(min(plot1), max(plot1))
-            yModel = self.func(xModel, *fittedParameters)
-            
-            axes.plot(xModel, yModel)
+            axes.plot(plot1,plot2,'D')
+            # plt.plot(x,y_pred,color='r',label='Linear Regression')
+            axes.plot(x_poly,poly_pred,color='g',label='Polynomial Regression')
 
-            axes.set_xlabel("class average")
-            axes.set_ylabel("test average")#
+        axes.set_xlabel("test average")
+        axes.set_ylabel("class average")#
         plt.show()
         plt.close('all')

@@ -15,7 +15,10 @@ class MathClass(Student):
         super().__init__(0, self.sectionNum, grades)
         self.students:list[Student] = []
         self.names = []
+        self.IDs = []
         self.caseDict = {}
+        self.loggingNotice2 = 'found and removed @ index:'
+        
     
     def addStudent(self, ID, currentGrade, sectionNumber=None):
         if sectionNumber is None:
@@ -24,26 +27,20 @@ class MathClass(Student):
             self.students.append(Student(ID, sectionNumber, currentGrade))
     
     def getClassAverage(self)->float:
-        self.classTotal = sum([i.getClassTotal() for i in self.students[1:]])/(len(self.students)-1)
-        return self.classTotal
-        # for student in self.students[1:]:
-        #     total += student.getClassTotal()
-        # self.classTotal = total/len(self.students)
-        # return self.classTotal
+        if len(self.students) >1:
+            self.classTotal = sum([i.getClassTotal() for i in self.students[1:]])/(len(self.students)-1)
+            return self.classTotal
+       
     
     def getTestAverage(self)->float:
-        self.testTotal = sum([i.getTestTotal() for i in self.students[1:]])/(len(self.students)-1)
-        # for student in self.students[1:]:
-        #     total += student.getTestTotal()
-        # self.testTotal = total/len(self.students)
-        return self.testTotal
+        if len(self.students) >1:
+            self.testTotal = sum([i.getTestTotal() for i in self.students[1:]])/(len(self.students)-1)
+            return self.testTotal
 
     def getClassWorkAverage(self)->float:
-        self.ClassWorkTotal = sum([i.getClassWorkTotal() for i in self.students[1:]])/(len(self.students)-1)
-        # for student in self.students[1:]:
-        #     total += student.getClassWorkTotal()
-        # self.ClassWorkTotal = total/len(self.students)
-        return self.ClassWorkTotal
+        if len(self.students) >1:
+            self.ClassWorkTotal = sum([i.getClassWorkTotal() for i in self.students[1:]])/(len(self.students)-1)
+            return self.ClassWorkTotal
 
     def sortStudents(self):
         self.students.sort(key=lambda x: x.getStudentID())
@@ -62,26 +59,48 @@ class MathClass(Student):
         
         self.names = [i.getStudentName() for i in self.students[1:]]
         return self.names
+    def getStudentLstGrades(self)->'list[str]':
+        return [i.getGrade() for i in self.students[1:]]
+    
     def getStudentPlot(self)->'list[float]':
-        self.plot1 = np.array([i.getClassTotal() for i in self.students[1:]])
-        self.plot2 = np.array([i.getTestTotal() for i in self.students[1:]]) 
+        self.plot2 = np.array([i.getClassTotal() for i in self.students[1:]])
+        self.plot1 = np.array([i.getTestTotal() for i in self.students[1:]]) 
         return self.plot1, self.plot2
         
-    def getStudent(self, studentName:int,UI=False):
+    def getStudent(self, studentName:int, getID=False)->'int|str|None|list[str, str]':
         # binary search for student
         low = 0
-        high = len(self.students) - 1
+        high = len(self.students)-1
         mid = 0
         i = 0
-        while low <= high:
+        while (low <= high):
             i+=1
-            mid = (low + high) // 2
+            mid = (low + high) // 2 # 
             student:Student = self.students[mid]
             if int(student.getStudentID()) < studentName:
                 low = mid + 1
             elif int(student.getStudentID()) > studentName:
                 high = mid - 1
             else:
-                print(i)
-                return student.getStudentName(), student.getGrade()
-        return 'not found','not found'
+                name = student.getStudentName()
+                print(f'search depth:{i},  student: {name}\n')
+                match getID:
+                    case True:
+                        return mid, name
+                    case False:
+                        return student.getStudentName(), student.getGrade()
+                    case _:
+                        print(f'__ERROR__{__file__}encountered None bool for match _recived_: {getID}')
+                        return '__ERROR__'
+        if getID == True:
+            return None, None
+        else:               
+            return '#', '#'
+        
+    def deleteStudent(self,IDnum):
+        ID_index, name = self.getStudent(IDnum, getID=True)
+        if None not in (ID_index, name): 
+            del self.students[ID_index]
+            self.loggingNoticePrint(ID_index, name)
+        
+        

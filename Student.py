@@ -11,26 +11,36 @@ class Student:
         self.testTotal = self.currentGrade[1]
         self.classWorkTotal = self.currentGrade[2]
         self.checkAndSetsTotal = self.currentGrade[3]
-       
+        self.loggingNotice = f'CHANGE LOGGED_FROM_ '
+        self.loggingNotice2 = 'recived:'
+    
+    def loggingNoticePrint(self, change, extraInfo=''):
+        print(self.loggingNotice + 
+              f'{__file__}__: __EVENT__ {extraInfo} {self.loggingNotice2} {change}')
+    
     def setclassTotal(self, grade:str):
+        self.loggingNoticePrint(grade)
         Total = self.classTotal.split(" ")
         Total[3] = str(float(grade)) + '%'
         self.classTotal = ' '.join(Total)
         self.currentGrade[0] = self.classTotal
         
     def setTestTotal(self, grade:str):
+        self.loggingNoticePrint(grade)
         Total = self.testTotal.split(" ")
         Total[4] = str(float(grade))
         self.testTotal = ' '.join(Total)
         self.currentGrade[1] = self.testTotal
     
     def setClassWorkTotal(self, grade:str):
+        self.loggingNoticePrint(grade)
         Total = self.classWorkTotal.split(" ")
         Total[4] = str(float(grade))
         self.classWorkTotal = ' '.join(Total)
         self.currentGrade[2] = self.classWorkTotal
     
     def setCheckAndSetsTotal(self, grade:str):
+        self.loggingNoticePrint(grade)
         Total = self.checkAndSetsTotal.split(" ")
         Total[5] = str(float(grade))
         self.checkAndSetsTotal = ' '.join(Total)
